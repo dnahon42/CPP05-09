@@ -6,7 +6,7 @@
 /*   By: dnahon <dnahon@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 14:30:23 by dnahon            #+#    #+#             */
-/*   Updated: 2025/11/07 16:01:33 by dnahon           ###   ########.fr       */
+/*   Updated: 2025/11/09 16:45:28 by dnahon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,8 @@ int RPN::rpn(std::string rpn)
 			continue ;
 		}
 	}
+	if (_stack.size() != 1)
+		throw RPNException();
 	return (_stack.top());
 }
 
